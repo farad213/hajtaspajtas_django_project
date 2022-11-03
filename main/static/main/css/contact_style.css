@@ -1,0 +1,42 @@
+.contact_info{
+    font-weight: 400;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    color: black;
+}
+
+.contact_block{
+    flex-basis: 350px;
+    background: darkorange;
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    border-radius: 150px;
+    border: 15px solid darkorange;
+}
+
+.contact_block p{
+    margin: 50px;
+}
+
+.contact_info a{
+    text-decoration: none;
+    color: black;
+}
+
+
+/*STYLING LINKS*/
+
+.contact_info a{
+    text-decoration: none;
+    color: black;
+    position: relative;
+    font-weight: bolder;
+}
+
+.contact_info a:hover{
+    color: white;
+}
+

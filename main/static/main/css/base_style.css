@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    offset-x: none;
+    width: 100%;
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+}
+
+/*HEADER*/
+
+header{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+}
+
+.logo-container{
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.logo{
+    height: 70px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+.navbar ul li{
+    display: inline;
+    margin: 20px;
+}
+
+.buttons button{
+    margin: 20px;
+}
+
+.home-link{
+    font-size: 25px;
+}
+
+#logo-link:after{
+    height: 0px;;
+}
+
+
+
+/*FOOTER*/
+
+footer{
+    background-color: darkorange;
+    color: white;
+}
+
+.columns_wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+
+.columns_wrapper > div{
+    max-width: 20%;
+    font-size: 12px;
+}
+
+
+.footer_title{
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.contact_paragraph a{
+    text-decoration: none;
+    color: white;
+}
+
+.social_wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+#facebook{
+    background-image: url(../images/fb-footer.png);
+    height: 34px;
+    width: 34px;
+}
+
+#youtube{
+    background-image: url(../images/yt-footer.png);
+    height: 34px;
+    width: 34px;
+}
+
+#instagram{
+    background-image: url(../images/insta-footer.png);
+    height: 34px;
+    width: 34px;
+}
+
+.partners{
+    padding-left: 50px;
+    padding-bottom: 50px;
+}
+
+.partners h4{
+    text-decoration: underline;
+}
+
+.partner_logos_wrapper{
+    display: flex;
+    align-items: center;
+}
+
+#clog{
+    background-image: url(../images/partner-clog.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 25px;
+    width: 150px;;
+}
+
+#bbm{
+    background-image: url(../images/partner-bbm.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50px;
+    width: 50px;
+}
+
+#bike{
+    background-image: url(../images/partner-bike.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 25px;
+    width: 50px;
+}
+
+#bbike{
+    background-image: url(../images/partner-bbike.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50px;
+    width: 50px;
+}
+
+
+
+/* SPECIAL BUTTON FORMATTING
+copied from: https://getcssscan.com/css-buttons-examples*/
+
+.button-57 {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #18181a;
+  color: #18181a;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bolder
+  line-height: 15px;
+  padding: 18px 18px 17px;
+  text-decoration: none;
+  cursor: pointer;
+  background: #fff;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-57 span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.button-57 span:last-child {
+  color: white;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+.button-57:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: orange;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+}
+
+.button-57:hover:after {
+  transform-origin: bottom center;
+  transform: skewY(9.3deg) scaleY(2);
+}
+
+.button-57:hover span:last-child {
+  transform: translateX(-50%) translateY(-100%);
+  opacity: 1;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+/*STYLING LINKS*/
+
+/*navbar*/
+
+header a{
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    position: relative;
+}
+
+header a:hover{
+    color: orange;
+}
+
+header a:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: orange;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+header a:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+
+
+

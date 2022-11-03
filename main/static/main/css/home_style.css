@@ -1,0 +1,17 @@
+/*BACKGROUND*/
+
+.background{
+    background-image: url(../images/bp.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-position: center;
+}
+
+.overlay{
+    background-image: url(../images/futar.png);
+    min-height: 80vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 50px;
+}
