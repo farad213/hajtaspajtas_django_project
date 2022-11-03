@@ -1,0 +1,23 @@
+.team_pic{
+    background-image: url(../images/team.jpg);
+    min-height: 550px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+article {
+    margin: 50px 250px 50px 250px;
+    font-size: 20px;
+    font-weight: 200;
+    text-align: justify;
+}
+
+.editors_monolouge{
+    background-color: #f3f4f5;
+    padding: 25px;
+}
+
+.spenot{
+    float: left;
+}
