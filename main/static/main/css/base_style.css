@@ -68,6 +68,11 @@ footer{
     color: white;
 }
 
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
 .columns_wrapper{
     display: flex;
     justify-content: space-around;
