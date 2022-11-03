@@ -1,29 +1,77 @@
 .contact_info{
     font-weight: 400;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    color: black;
-}
-
-.contact_block{
-    flex-basis: 350px;
-    background: darkorange;
-    margin: 40px;
-    display: flex;
-    justify-content: center;
-    border-radius: 150px;
-    border: 15px solid darkorange;
-}
-
-.contact_block p{
-    margin: 50px;
+    color: white;
 }
 
 .contact_info a{
     text-decoration: none;
-    color: black;
+    color: white;
+}
+
+.contact_block{
+    margin: 70px;
+}
+
+.contact_block p{
+    font-size: 20px;
+    padding: 50px 100px 50px 100px;
+    width: 300px;
+    background: linear-gradient(rgba(33, 33, 33, 0.7), rgba(33, 33, 33, 0.7));
+}
+
+#budapest{
+    background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)),
+        url(../images/budapest.jpg);
+    min-height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+#videk{
+    background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)),
+        url(../images/videk.jpg);
+    min-height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+#review{
+    background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)),
+        url(../images/review.jpg);
+    min-height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+#accounting{
+    background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)),
+        url(../images/penzugy.jpg);
+    min-height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+#fax{
+    background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)),
+        url(../images/fax.jpg);
+    min-height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
 }
 
 
@@ -31,12 +79,12 @@
 
 .contact_info a{
     text-decoration: none;
-    color: black;
+    color: white;
     position: relative;
     font-weight: bolder;
 }
 
 .contact_info a:hover{
-    color: white;
+    color: orange;
 }
 
