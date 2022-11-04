@@ -6,6 +6,17 @@
 Hajtás Pajtás - Árak
 {% endblock %}
 
+
 {% block content %}
+<link rel="stylesheet" href="{% static 'main/css/prices_style.css' %}">
+
+<div class="content_block">
+    <h1>Szolgáltatások</h1>
+    <div class="wrapper">
+        <a href="/budapest"><div class="budapest"></div></a>
+        <a href="/videk"><div class="videk"></div></a>
+        <a href="/kulfold"><div class="kulfold"></div></a>
+    </div>
+</div>
 
 {% endblock %}

@@ -14,3 +14,12 @@ def contact(request):
 
 def about_us(request):
     return render(request, "main/about_us.html", {})
+
+def budapest(request):
+    return render(request, "main/budapest.html", {})
+
+def videk(request):
+    return render(request, "main/videk.html", {})
+
+def kulfold(request):
+    return render(request, "main/kulfold.html", {})

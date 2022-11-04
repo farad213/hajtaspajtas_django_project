@@ -1,0 +1,38 @@
+.budapest{
+    background-image: url(../images/budapest_circle.png);
+    height: 200px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.videk{
+    background-image: url(../images/videk_circle.png);
+    height: 200px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.kulfold{
+    background-image: url(../images/kulfold_circle.png);
+    height: 200px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-around;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+.content_block{
+    display: flex;
+    flex-direction: column;
+    margin: 50px 15% 50px 15%;
+    align-items: center;
+}
+
