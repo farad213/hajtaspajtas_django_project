@@ -1,0 +1,27 @@
+section{
+    margin: 50px 200px 50px 200px;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+table{
+    width: 100%;
+}
+
+section a{
+    color: black;
+    text-decoration: none;
+}
+
+section a:hover{
+    color: orange;
+}
+
+.odd{
+    background-color: lightgrey;
+}
+
+.row td{
+    padding: 20px;
+}

@@ -1,0 +1,97 @@
+.contact_info{
+    font-weight: 400;
+    color: white;
+    font-size: 20px;
+}
+
+.contact_block{
+    display: flex;
+    align-items: center;
+    margin: 100px;
+    justify-content: space-between;
+}
+
+.contact_block p{
+    width: 40%;
+    padding: 50px;
+    background: linear-gradient(rgba(33, 33, 33, 0.8), rgba(33, 33, 33, 0.8));
+
+}
+
+.pic_text{
+    background: linear-gradient(rgba(33, 33, 33, 0.8), rgba(33, 33, 33, 0.8));
+    font-size: 25px;
+    padding: 40px;
+    color: white;
+}
+
+#budapest{
+    background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)),
+        url(../images/budapest.jpg);
+
+    min-height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+#videk{
+    background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)),
+        url(../images/videk.jpg);
+    min-height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+#review{
+    background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)),
+        url(../images/review.jpg);
+    min-height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+#accounting{
+    background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)),
+        url(../images/penzugy.jpg);
+    min-height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+#fax{
+    background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)),
+        url(../images/fax.jpg);
+    min-height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+
+/*STYLING LINKS*/
+
+.contact_info a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+    font-weight: bolder;
+}
+
+.contact_info a:hover{
+    color: orange;
+}
+
