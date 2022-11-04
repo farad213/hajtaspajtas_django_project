@@ -167,15 +167,6 @@ footer a{
     width: 34px;
 }
 
-.partners{
-    padding-left: 50px;
-    padding-bottom: 50px;
-}
-
-.partners h4{
-    text-decoration: underline;
-}
-
 .partner_logos_wrapper{
     display: flex;
     align-items: center;
@@ -211,6 +202,11 @@ footer a{
     background-size: contain;
     height: 50px;
     width: 50px;
+}
+
+.copyright{
+    font-size: 13px;
+    padding: 15px;
 }
 
 
