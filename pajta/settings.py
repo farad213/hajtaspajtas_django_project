@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "main",
-    'widget_tweaks',
+    "accounts",
+    "widget_tweaks",
 ]
 
 MIDDLEWARE = [
@@ -129,4 +130,4 @@ SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 # STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT =os.path.join(BASE_DIR, 'staticfiles')
-AUTH_USER_MODEL = 'main.CustomUser'
+AUTH_USER_MODEL = 'accounts.CustomUser'
