@@ -13,12 +13,23 @@ Hajtás Pajtás - Rgisztráció - Cég
 <h1>Company</h1>
 
 <form action="" method="POST">
+
     {% csrf_token %}
-    {% for field in form %}
+
+    {% for field in user_creation_form %}
         {{ field.label_tag }}
         {{ field }}
-    <br>
+        <br>
     {% endfor %}
+
+    {% for field in company_form %}
+        {% if field.label != 'Is company' %}
+            {{ field.label_tag }}
+            {{ field }}
+        {% endif %}
+        <br>
+    {% endfor %}
+
     <button type="submit">Regisztrálok</button>
 </form>
 

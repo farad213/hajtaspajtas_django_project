@@ -1,16 +1,23 @@
 from django.contrib.auth.forms import UserCreationForm
-from .models import CustomUser
+from .models import CustomUser, PrivatePerson, Company
+from django import forms
 
 
-class CompanyForm(UserCreationForm):
+class CustomUserForm(UserCreationForm):
     class Meta:
         model = CustomUser
-        fields = ["company_name", "company_phone_number", "invoice_postal_code", "invoice_town", "invoice_address",
-                  "invoice_country", "tax_number", "is_company", "is_private_person", "username"]
+        fields = ["username", "password1", "password2"]
 
 
-class PrivatePersonForm(UserCreationForm):
+class PrivatePersonForm(forms.ModelForm):
     class Meta:
-        model = CustomUser
-        fields = ["private_phone_number", "first_name", "last_name", "invoice_postal_code", "invoice_town", "invoice_address",
-                  "invoice_country", "is_company", "is_private_person", "username"]
+        model = PrivatePerson
+        fields = ["phone_number", "invoice_postal_code", "invoice_town", "invoice_address",
+                  "invoice_country", "last_name", "first_name"]
+
+
+class CompanyForm(forms.ModelForm):
+    class Meta:
+        model = Company
+        fields = ["company_name", "company_phone_number", "tax_number", "invoice_postal_code",
+                  "invoice_town", "invoice_address", "invoice_country"]
