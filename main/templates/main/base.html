@@ -10,37 +10,41 @@
 <body>
     <header>
         <div class="logo-container">
-            <a id="logo-link" href="/">
+            <a id="logo-link" href="{% url 'home' %}">
                 <img class="logo" src="{% static 'main/images/logo.png' %}" alt="logo">
             </a>
-            <a class="home-link" id="home-link" href="/">Hajtás Pajtás</a>
+            <a class="home-link" id="home-link" href="{% url 'home' %}">Hajtás Pajtás</a>
         </div>
 
        <nav>
           <ul>
-            <li><a href="/online_order">Online rendelés</a></li>
+            <li><a href="{% url 'online_order' %}">Online rendelés</a></li>
             <li>
-              <a href="/prices">Árak</a>
+              <a href="{% url 'prices' %}">Árak</a>
               <ul class="submenu">
-                <li><a href="/budapest">Budapest</a></li>
-                <li><a href="/videk">Vidék</a></li>
-                <li><a href="/kulfold">Külföld</a></li>
+                <li><a href="{% url 'budapest' %}">Budapest</a></li>
+                <li><a href="{% url 'videk' %}">Vidék</a></li>
+                <li><a href="{% url 'kulfold' %}">Külföld</a></li>
               </ul>
             </li>
-            <li><a href="/contact">Kapcsolat</a></li>
-            <li><a href="/about_us">Rólunk</a></li>
+            <li><a href="{% url 'contact' %}">Kapcsolat</a></li>
+            <li><a href="{% url 'about_us' %}">Rólunk</a></li>
           </ul>
         </nav>
 
         <div class="buttons">
-            <a href="{% url 'register' %}"><button class="button-57" role="button">
-                <span class="text">Regisztráció</span>
-                <span>Yayyyy <br> új barát &#129303; </span>
-            </button></a>
-            <button class="button-57" role="button">
-                <span class="text">Bejelentkezés</span>
-                <span>Hiányoztál, rendelj sokat!</span>
-            </button>
+            <form action="{% url 'register' %}">
+                <button class="button-57" role="button">
+                    <span class="text">Regisztráció</span>
+                    <span>Yayyyy <br> új barát &#129303; </span>
+                </button>
+            </form>
+            <form action="{% url 'prices' %}">
+                <button class="button-57" role="button">
+                    <span class="text">Bejelentkezés</span>
+                    <span>Hiányoztál, rendelj sokat!</span>
+                </button>
+            </form>
         </div>
     </header>
 
@@ -52,7 +56,7 @@
         <div class="columns_wrapper">
 
             <div>
-                <h4 class="footer_title"><a href="/">HAJTÁS PAJTÁS KFT.</a></h4>
+                <h4 class="footer_title"><a href="{% url 'home' %}">HAJTÁS PAJTÁS KFT.</a></h4>
                 <p>
                     1074 Budapest Vörösmarty u. 20. (bejárat a Király utca felől)
                     <br>
@@ -73,7 +77,7 @@
             </div>
 
             <div>
-                <h4 class="footer_title"><a href="/contact">KAPCSOLAT</a></h4>
+                <h4 class="footer_title"><a href="{% url 'contact' %}">KAPCSOLAT</a></h4>
                 <p class="contact_paragraph">
                     E-mail: kapcsolat@hajtaspajtas.hu
                     <br>

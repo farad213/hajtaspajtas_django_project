@@ -95,7 +95,9 @@ ul li a::before {
   transform-origin: bottom left;
 }
 
-
+.buttons{
+    display: flex;
+}
 
 .buttons button{
     margin: 20px;
