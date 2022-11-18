@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}
+Hajtás Pajtás - Regisztráció - Magánszemély
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'main/css/register_private_person_style.css' %}">
+
+<h1>Private Person</h1>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {% for field in form %}
+        {{ field.label_tag }}
+        {{ field }}
+    <br>
+    {% endfor %}
+    <button type="submit">Regisztrálok</button>
+</form>
+
+{% endblock %}
