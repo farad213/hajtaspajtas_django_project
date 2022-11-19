@@ -12,8 +12,8 @@ class CustomUserForm(UserCreationForm):
 class PrivatePersonForm(forms.ModelForm):
     class Meta:
         model = PrivatePerson
-        fields = ["phone_number", "invoice_postal_code", "invoice_town", "invoice_address",
-                  "invoice_country", "last_name", "first_name"]
+        fields = ["last_name", "first_name", "phone_number", "invoice_postal_code", "invoice_town", "invoice_address",
+                  "invoice_country"]
 
 
 class CompanyForm(forms.ModelForm):

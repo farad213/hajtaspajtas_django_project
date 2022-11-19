@@ -2,8 +2,6 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 class CustomUser(AbstractUser):
-    # is_company = models.BooleanField()
-    # is_private_person = models.BooleanField()
     pass
 
 class PrivatePerson(models.Model):
