@@ -8,29 +8,69 @@ Hajtás Pajtás - Rgisztráció - Cég
 {% endblock %}
 
 {% block content %}
-<link rel="stylesheet" href="{% static 'main/css/register_company_style.css' %}">
+<link rel="stylesheet" href="{% static 'accounts/css/register_company_style.css' %}">
 
-<h1>Company</h1>
 
-<form action="" method="POST">
+<div class="modal-wrap">
+     <form method="POST" novalidate>
+         {% csrf_token %}
 
-    {% csrf_token %}
+        <div class="modal-header"><span class="is-active"></span><span></span><span></span></div>
+        <div class="modal-bodies">
 
-    {% for field in user_creation_form %}
-        {{ field.label_tag }}
-        {{ field }}
-        <br>
-    {% endfor %}
+            <div class="modal-body modal-body-step-1 is-showing">
+                <div class="title">Gég regisztrálása</div>
+                <div class="description">Ezzel a felhasználónévvel és jelszóval tud majd mindenki a cégnél belépni.</div>
 
-    {% for field in company_form %}
-        {% if field.label != 'Is company' %}
-            {{ field.label_tag }}
-            {{ field }}
-        {% endif %}
-        <br>
-    {% endfor %}
 
-    <button type="submit">Regisztrálok</button>
-</form>
+                    {% for field in user_creation_form %}
+                    {{ field }}
+                    {% endfor %}
+
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="error_msg">{{ message }}</div>
+                        {% endfor %}
+                    {% endif %}
+                    <div class="text-center">
+                        <div class="button">Következő</div>
+                    </div>
+            </div>
+
+            <div class="modal-body modal-body-step-2">
+                <div class="title">Gég adatai</div>
+                <div class="description">Kiegészítő szöveg</div>
+
+                    {{ company_form.company_name|attr:"autofocus" }}
+                    {{ company_form.company_phone_number }}
+                    {{ company_form.tax_number }}
+                    <div class="text-center fade-in">
+                        <div class="button">Következő</div>
+                    </div>
+
+            </div>
+
+            <div class="modal-body modal-body-step-3">
+                <div class="title">Számlázási adatok</div>
+                <div class="description">Kiegészítő szöveg</div>
+                    {{ company_form.invoice_postal_code }}
+                    {{ company_form.invoice_town }}
+                    {{ company_form.invoice_address }}
+                    {{ company_form.invoice_country }}
+                    <div class="text-center fade-in">
+                        <button type="submit" class="button">Regisztrálok</button>
+                    </div>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="{% static 'accounts/js/register_private_person.js' %}"></script>
 
 {% endblock %}
+
+
+

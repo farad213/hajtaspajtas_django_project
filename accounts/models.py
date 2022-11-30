@@ -15,7 +15,7 @@ class PrivatePerson(models.Model):
     first_name = models.CharField(max_length=50, verbose_name="Keresztnév")
 
     def __str__(self):
-        return f"{self.last_name} {self.first_name}"
+        return f"{self.first_name} {self.last_name}"
 
 class Company(models.Model):
     is_company = models.ForeignKey(CustomUser, on_delete=models.CASCADE)

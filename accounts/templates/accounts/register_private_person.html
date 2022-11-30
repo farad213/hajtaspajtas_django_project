@@ -1,33 +1,71 @@
 <!DOCTYPE html>
 {% extends "main/base.html" %}
 {% load static %}
+{% load widget_tweaks %}
 
 {% block title %}
 Hajtás Pajtás - Regisztráció - Magánszemély
 {% endblock %}
 
 {% block content %}
-<link rel="stylesheet" href="{% static 'main/css/register_private_person_style.css' %}">
+<link rel="stylesheet" href="{% static 'accounts/css/register_private_person_style.css' %}">
 
-<h1>Private Person</h1>
+<div class="modal-wrap">
+     <form method="POST" novalidate>
+         {% csrf_token %}
 
-<form action="" method="POST">
+        <div class="modal-header"><span class="is-active"></span><span></span><span></span></div>
+        <div class="modal-bodies">
 
-    {% csrf_token %}
+            <div class="modal-body modal-body-step-1 is-showing">
+                <div class="title">Magánszemély regisztrálása</div>
+                <div class="description">Ezzel a felhasználónévvel és jelszóval tudsz majd belépni</div>
 
-    {% for field in user_creation_form %}
-        {{ field.label_tag }}
-        {{ field }}
-        <br>
-    {% endfor %}
 
-    {% for field in private_person_form %}
-        {{ field.label_tag }}
-        {{ field }}
-        <br>
-    {% endfor %}
+                    {% for field in user_creation_form %}
+                    {{ field }}
+                    {% endfor %}
 
-    <button type="submit">Regisztrálok</button>
-</form>
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="error_msg">{{ message }}</div>
+                        {% endfor %}
+                    {% endif %}
+                    <div class="text-center">
+                        <div class="button">Következő</div>
+                    </div>
+            </div>
 
+            <div class="modal-body modal-body-step-2">
+                <div class="title">Adataid</div>
+                <div class="description">Kiegészítő szöveg</div>
+
+                    {{ private_person_form.first_name|attr:"autofocus" }}
+                    {{ private_person_form.last_name }}
+                    {{ private_person_form.phone_number }}
+                    <div class="text-center fade-in">
+                        <div class="button">Következő</div>
+                    </div>
+
+            </div>
+
+            <div class="modal-body modal-body-step-3">
+                <div class="title">Számlázási adatok</div>
+                <div class="description">Kiegészítő szöveg</div>
+                    {{ private_person_form.invoice_postal_code }}
+                    {{ private_person_form.invoice_town }}
+                    {{ private_person_form.invoice_address }}
+                    {{ private_person_form.invoice_country }}
+                    <div class="text-center fade-in">
+                        <button type="submit" class="button">Regisztrálok</button>
+                    </div>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="{% static 'accounts/js/register_company.js' %}"></script>
 {% endblock %}

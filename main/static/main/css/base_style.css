@@ -70,7 +70,7 @@ ul li .submenu a {
   text-align: center;
 }
 ul li .submenu a:hover {
-  color: #fff;
+  color: red;
   text-decoration: none;
 }
 ul li a {
